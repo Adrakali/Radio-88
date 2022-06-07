@@ -1,0 +1,205 @@
+#player {
+	background-color: #fbb131;
+	border-top: 3px solid black;
+	position: fixed;
+	/* padding: 20px 5%; */
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow: hidden;
+	height: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+.fa-circle-pause,
+.fa-circle-play {
+	margin-right: 16px;
+	font-size: xx-large;
+}
+
+.mutebtn {
+	background-color: rgba(0, 0, 0, 0);
+	outline: none;
+	border: none;
+	font-size: x-large;
+	cursor: pointer;
+}
+
+/* SLIDER */
+
+.slidecontainer {
+	/* Width of the outside container */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+/* The slider itself */
+
+.slider {
+	-webkit-appearance: none; /* Override default CSS styles */
+	appearance: none;
+	/* Full-width */
+	height: 5px; /* Specified height */
+	background: black; /* Grey background */
+	outline: none; /* Remove outline */
+	opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+	-webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+	transition: opacity 0.2s;
+	border-radius: 2.5px;
+	cursor: pointer;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+	opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 25px; /* Set a specific slider handle width */
+	height: 25px; /* Slider handle height */
+	background: #3d2414; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+	width: 25px; /* Set a specific slider handle width */
+	height: 25px; /* Slider handle height */
+	background: #3d2414; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+}
+
+#player__playbtn {
+	font-size: 1rem;
+	background-color: red;
+	border: none;
+	cursor: pointer;
+	padding-left: 20px;
+	margin-right: 16px;
+	background-color: #ffd388;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#player__playbtn:hover {
+	background-color: #ec9a0c;
+}
+
+.archive-seek-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hide {
+	display: none;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.player-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+#player__title {
+	flex-grow: 1;
+	text-align: left;
+	margin: 0px;
+}
+
+.player__seek-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.thumbnail {
+	margin-right: 30px;
+	width: 105px;
+	height: 75px;
+	background: url(https://radio88.se/wp-content/uploads/2021/02/lasse-3840x2880.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid black;
+}
+
+input[type='range'] {
+	-webkit-appearance: none !important;
+	height: 13px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: black;
+	cursor: pointer;
+	border-radius: 100px;
+}
+input[type='range']::-ms-fill-lower {
+	background: #000;
+	height: 13px;
+	width: 100%;
+	cursor: pointer;
+}
+input[type='range']::-ms-fill-upper {
+	background: #000;
+	height: 13px;
+	width: 100%;
+	cursor: pointer;
+}
+input[type='range']::-moz-range-track {
+	border: none;
+	background: #000;
+	height: 13px;
+	width: 100%;
+	cursor: pointer;
+}
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	background: red;
+	height: 24px;
+	width: 16px;
+
+	cursor: pointer;
+	border: 2px solid black;
+}
+input[type='range']::-moz-range-thumb {
+	background: red;
+	border: 1px solid black;
+	height: 28px;
+	width: 28px;
+
+	cursor: pointer;
+}
+input[type='range']::-ms-thumb {
+	-webkit-appearance: none !important;
+	background: red;
+	border: 1px solid black;
+	height: 28px;
+	width: 28px;
+
+	cursor: pointer;
+}
+
+#current-time {
+	padding-right: 8px !important;
+}
+
+#total-time {
+	padding-left: 8px;
+}
